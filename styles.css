@@ -1,0 +1,31 @@
+#add-order-button {
+    margin: 10px;
+}
+
+#order-container {
+    border: 1px solid black;
+    border-radius: 20px;
+    overflow-x: scroll;
+    overflow-y: hidden;
+}
+
+#order-header-rows, #order-rows {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    border-bottom: 1px solid black;
+}
+
+#order-header-columns {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    text-align: center;
+    margin: 5px 0 5px 0;
+}
+
+.order-header-content {
+    width: 5.8%;
+    font-weight: 500;
+}

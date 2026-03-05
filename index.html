@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transport manager</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <input type="button" id="add-order-button" value="Add Order" onclick="createTransportData()"/>
+    
+    <div id="order-container">
+        <div id="order-header-rows">
+            <div id="order-header-columns">
+                <div class="order-header-content">ID</div>
+                <div class="order-header-content">Sender</div>
+                <div class="order-header-content">Loading address</div>
+                <div class="order-header-content">Loading date</div>
+                <div class="order-header-content">Receiver</div>
+                <div class="order-header-content">Delivery address</div>
+                <div class="order-header-content">Delivery date</div>
+                <div class="order-header-content">PO</div>
+                <div class="order-header-content">Pallets</div>
+                <div class="order-header-content">Weight</div>
+                <div class="order-header-content">Forwarder</div>
+                <div class="order-header-content">Cost</div>
+                <div class="order-header-content">REF</div>
+                <div class="order-header-content">Customs</div>
+                <div class="order-header-content order-button">Open</div>
+                <div class="order-header-content order-button">Edit</div>
+                <div class="order-header-content order-button">Delete</div>
+            </div>
+            
+        </div>
+        <div id="order-rows">
+            <div id="order-content">Transport order Nr 1</div>
+            <div id="order-header">Transport order Nr 2</div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
