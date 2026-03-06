@@ -34,9 +34,57 @@
         </div>
         <div id="order-rows">
             <div id="order-content">Transport order Nr 1</div>
-            <div id="order-header">Transport order Nr 2</div>
+            <div id="order-content">Transport order Nr 2</div>
         </div>
     </div>
+
+    <div id="enterOrder-container">
+        <div id="enterOrder-rows">
+            <form >
+                <label for="fname">Sender</label>
+                <input type="text" id="fname" name="firstname" placeholder="Choose sender...">
+
+                <label for="lname">Loading Address</label>
+                <input type="text" id="lname" name="lastname" placeholder="">
+
+                <label for="loadingDate">Loading Date:</label>
+                <input type="date" id="loadingDate" name="loadingDate">
+
+                <label for="fname">Receiver</label>
+                <input type="text" id="fname" name="firstname" placeholder="Choose receiver...">
+
+                <label for="lname">Unloading Address</label>
+                <input type="text" id="lname" name="lastname" placeholder="">
+
+                <label for="unloadingDate">Unlaoding Date:</label>
+                <input type="date" id="unloadingDate" name="unloadingDate">
+
+                <label for="sappo">SAP PO</label>
+                <input type="text" id="sappo" name="sappo" placeholder="">
+
+                <label for="pallets">Pallets</label>
+                <input type="text" id="pallets" name="pallets" placeholder="">
+
+                <label for="weight">Weight</label>
+                <input type="text" id="weight" name="weight" placeholder="">
+
+                <label for="country">Temperature control</label>
+                <select id="country" name="country">
+                    <option value="No">No</option>
+                    <option value="Yes">Yes</option>
+                </select>
+
+                <label for="customs">Customs</label>
+                <select id="customs" name="customs">
+                    <option value="No">No</option>
+                    <option value="Yes">Yes</option>
+                </select>
+                
+                <input type="submit" value="Submit" onclick="insertNewOrder()">
+            </form>
+        </div>
+    </div>
+
     <script src="script.js"></script>
 </body>
 </html>
