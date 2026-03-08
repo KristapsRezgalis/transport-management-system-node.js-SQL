@@ -1,0 +1,32 @@
+CREATE TABLE t_forwarder (
+	forwarder_id SERIAL PRIMARY KEY,
+	fw_name VARCHAR(100) NOT NULL,
+	fw_reg_nr VARCHAR(100) NOT NULL,
+	fw_vat_nr VARCHAR(100) NOT NULL,
+	fw_addess VARCHAR(255) NOT NULL,
+	fw_phone_nr VARCHAR(100) NOT NULL,
+	fw_email VARCHAR(100) NOT NULL
+);
+
+INSERT INTO t_forwarder (forwarder_id,fw_name,fw_reg_nr,fw_vat_nr,fw_addess,fw_phone_nr,fw_email)
+VALUES 
+(1,'HB, SIA', '43603039035','LV43603039035','Jelgava, Pērnavas iela 1, LV-3004','+37122222222','info@hb.lv'
+),
+(2,'URSUS FORWARDING, SIA', '40003931354','LV40003931354','Rīga, Raunas iela 44 k-1, LV-1039','+37123333333','anna@ursus.lv'
+);
+
+INSERT INTO t_forwarder (forwarder_id,fw_name,fw_reg_nr,fw_vat_nr,fw_addess,fw_phone_nr,fw_email)
+VALUES 
+(3,'Arfi Line, SIA', '40003894310','LV40003894310',Ropažu nov., Garkalnes pag., Langstiņi, Elenburgas iela 10A, LV-2137','+37124444444','eb@arfiline.lv'
+);
+
+// json insert for Postman:
+{
+    "forwarder_id": 3,
+    "fw_name": "Arfi Line, SIA",
+    "fw_reg_nr": "40003894310",
+    "fw_vat_nr": "LV40003894310",
+    "fw_addess": "Ropažu nov., Garkalnes pag., Langstiņi, Elenburgas iela 10A, LV-2137",
+    "fw_phone_nr": "+37124444444",
+    "fw_email": "eb@arfiline.lv"
+}
