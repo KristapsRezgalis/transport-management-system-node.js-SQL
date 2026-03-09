@@ -7,7 +7,9 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <input type="button" id="add-order-button" value="Add Order" onclick="createTransportData()"/>
+    
+    <input type="button" id="add-order-button" value="Add Forwarder" onclick="openForwarderForm()"/>
+    <input type="button" id="add-order-button" value="Add Order" onclick="openOrderForm()"/>
     
     <div id="order-container">
         <div id="order-header-rows">
@@ -38,9 +40,10 @@
         </div>
     </div>
 
+    <!-- Form to add new transport order to database -->
     <div id="enterOrder-container">
         <div id="enterOrder-rows">
-            <form >
+            <form id="order-form">
                 <label for="fname">Sender</label>
                 <input type="text" id="fname" name="firstname" placeholder="Choose sender...">
 
@@ -80,7 +83,43 @@
                     <option value="Yes">Yes</option>
                 </select>
                 
-                <input type="submit" value="Submit" onclick="insertNewOrder()">
+                <div id="insertCancel-button-field">
+                    <input id="button-confirm" type="submit" value="Submit" onclick="insertNewOrder()">
+                    <input id="button-cancel" type="submit" value="Cancel" onclick="cancelNewOrder()">
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Form to add new forwarder to database -->
+    <div id="forwarder-container">
+        <div id="enterOrder-rows">
+            <form id="forwarder-form">
+                <label for="forwardername">Forwarder name</label>
+                <input type="text" id="forwardername" name="forwardername" placeholder="enter company name...">
+
+                <label for="forwarderregistration">Registration number</label>
+                <input type="text" id="forwarderregistration" name="forwarderregistration" placeholder="enter registration number...">
+
+                <label for="forwardervat">VAT number</label>
+                <input type="text" id="forwardervat" name="forwardervat" placeholder="enter VAT number...">
+
+                <label for="forwarderaddress">Address</label>
+                <input type="text" id="forwarderaddress" name="forwarderaddress" placeholder="enter address...">
+
+                <label for="forwardercountry">Country</label>
+                <input type="text" id="forwardercountry" name="forwardercountry" placeholder="enter country...">
+
+                <label for="forwarderphone">Phone number</label>
+                <input type="date" id="forwarderphone" name="forwarderphone" placeholder="enter phone number...">
+
+                <label for="forwarderemail">E-mail</label>
+                <input type="date" id="forwarderemail" name="forwarderemail" placeholder="enter e-mail...">
+                
+                <div id="insertCancel-button-field">
+                    <button id="button-confirm" type="submit" value="Submit" onclick="insertNewForwarder()"></button>
+                    <button id="button-cancel" type="submit" value="Cancel" onclick="cancelNewForwarder()"></button>
+                </div>
             </form>
         </div>
     </div>

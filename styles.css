@@ -35,8 +35,11 @@ body {
     font-weight: 500;
 }
 
-#enterOrder-container {
-    display: block;
+/* ===================
+Add forwarder, add order, add company, add address containers and form styling
+====================*/
+#enterOrder-container, #forwarder-container {
+    display: none;
     position: absolute;
     background-color: #FFFFEA;
     width: 50%;
@@ -51,32 +54,58 @@ body {
 }
 
 form {
-  padding: 20px;
+    padding: 20px;
 }
 
 label {display: flex;}
 
 input[type=text], select {
-  width: 100%;
-  padding: 5px;
-  margin: 8px 0;
-  display: inline-block;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  box-sizing: border-box;
+    width: 100%;
+    padding: 5px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
 }
 
-input[type=submit] {
-  width: 100%;
-  background-color: #AC3931;
-  color: white;
-  padding: 14px;
-  margin: 8px 0;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
+input[type=date], select {
+    width: 30%;
+    padding: 5px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
 }
 
-input[type=submit]:hover {
-  background-color: #560701;
+#insertCancel-button-field {
+    display: flex;
+    margin-top: 20px;
+}
+
+#button-confirm, #button-cancel {
+    width: 100%;
+    padding: 20px;
+    margin: 8px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+#button-confirm {
+    background-color: #AC3931;
+    color: white;
+}
+#button-confirm:hover {
+    background-color: #560701;
+    transition: all 0.5s;
+}
+
+#button-cancel {
+    background-color: #ffffff;
+    color: black;
+}
+#button-cancel:hover {
+    background-color: #dbdbdb;
+    transition: all 0.5s;
 }
